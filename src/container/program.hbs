@@ -29,9 +29,7 @@
             </ul>
             <br>
         {{#with details}}
-            
-
-                  {{#with museum}}
+              {{#with museum}}
                   <ul>
                      <div><b>{{name}}</b></div>
                   </ul>
@@ -40,9 +38,7 @@
                         <div>Address: {{address}}, {{city}}, {{country}}</div>
                      </address>
                   {{/with}}
-                  
-
-                    <br>
+                     <br>
                         {{#each exhibits}}
                          <ul>
                            <div>Exhibits:</div>
@@ -54,14 +50,9 @@
                            <div>Audio guide: {{audio_guide}}</div>
                           </ul>
                       {{/each}}
-                      
+                      {{/with}}
 
-                      
-                  {{/with}}
-
-                  
-
-                  {{#with guide_first}}
+                    {{#with guide_first}}
                       <ul>
                         <div>Guide: {{name}}</div>
                         <div>language: {{language}}</div>
@@ -69,12 +60,8 @@
                       </ul>  
                       {{/with}}
 
-                      
-
-                      
-
-                {{/with}}
-{{#with details}}
+                      {{/with}}
+                    {{#with details}}
                          {{#with venue}}
                        <ul>
                          <div><b>{{name}}</b></div>
