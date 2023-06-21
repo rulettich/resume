@@ -1,0 +1,138 @@
+<header>
+  <div>
+    <h1>{{name}}</h1>
+  </div>
+</header>
+<br>
+<hr>
+<main>
+   <section>
+       {{> title data="Users" big=true}}
+        {{#each users}}
+         <ul>
+          <div><h1>User: <b>{{id}}</b></h1></div>
+          <br>
+          <ul>
+          <div>Name: <strong>{{name}}</strong></div>
+          <br>
+          <div>Gender: <b>{{gender}}</b></div>
+          <br>
+          <div>Age: <b>{{age}}</b></div>
+          </ul>
+          <br>
+          <hr>
+          </ul>
+          <br>
+          <ul>
+           <div><b><em>Friends</em></b></div>
+           </ul>
+           <br>
+           <ul>
+        {{#each friends}} 
+          
+           <ul> 
+            <div>Id: <b>{{id}}</b></div>
+            <br>
+            <div>Name: <b>{{name}}</b></div>
+            <br>
+            <div>Gender: <b>{{gender}}</b></div>
+            <br>
+            <div>Age: <b>{{age}}</b></div>
+            <br>
+          </ul> 
+            <br>
+            
+            
+            <div><b><em>Mutual friends</em></b></div>
+            
+            <br>
+            
+            {{#each mutual_friends}}
+              <br>
+              <ul> 
+              <div>Id: <b>{{id}}</b></div>
+              <br>
+              <div>Name: <b>{{name}}</b></div>
+              <br>
+              <div>Gender: <b>{{gender}}</b></div>
+              <br>
+              <div>Age: <b>{{age}}</b></div>
+            </ul> 
+          <br>
+          {{/each}}
+            
+              {{#each groups}}
+                  {{> title data="Group" big=false}}
+                <br>
+                  <ul>
+                    <div>Id: <b>{{id}}</b></div>
+                    <br>
+                    <div>Name: <b>"{{name}}"</b></div>
+                    <br>
+                    <div><em>{{description}}</em></div>
+                    <br>
+                    <ul>
+                      <br>
+                      <br>
+                      <div><b><em>Members</em></b></div>
+                    </ul>
+                    </ul>
+                    <br>
+                    {{#each members}}
+                      <br>
+                      
+                   <ul>
+                  <div>Id: <b>{{id}}</b></div>
+                  <br>
+                  <div>Name: <b>{{name}}</b></div>
+                  <br>
+                  <div>Gender: <b>{{gender}}</b></div>
+                  <br>
+                  <div>Age: <b>{{age}}</b></div>
+                  <br>
+                   </ul>
+                   <br>
+                    {{/each}}
+                    
+                  </ul>
+                  <br>
+    
+                {{/each}}
+                </ul>
+      {{/each}} 
+
+         
+           {{#each groups}}
+           {{> title data="Group" big=false}}
+            <br>
+            <ul>
+             <div>Id: <b>{{id}}</b></div>
+             <br>
+             <div>Name: <b>"{{name}}"</b></div>
+             <br>
+             <div><em>{{description}}</em></div>
+             </ul>
+             <br>
+
+               <ul>
+                <div><b><em>Members</em></b></div>
+                </ul>
+                
+              {{#each members}}
+                 <br>
+                   <ul>
+                  <div>Id: <b>{{id}}</b></div>
+                  <br>
+                  <div>Name: <b>{{name}}</b></div>
+                  <br>
+                  <div>Gender: <b>{{gender}}</b></div>
+                  <br>
+                  <div>Age: <b>{{age}}</b></div>
+                  <br>
+                   </ul>
+                   <br>
+              {{/each}}
+          {{/each}}
+      {{/each}}
+  </section>
+</main>

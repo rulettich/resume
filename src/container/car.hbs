@@ -1,0 +1,175 @@
+<header>
+  <div>
+      {{>title data="Toyota Camry" big=true}}
+  </div>
+    <div>Make: <em>{{make}}</em></div>
+    <div>Model: <em>{{model}}</em></div>
+    <div>Year: <em>{{year}}</em></div>
+     <div>Color: <em>{{color}}</em></div>
+  </header> 
+<br>
+   <hr>
+<main>
+  {{#with features}}
+   <section>
+       {{>title data="Features" big=true}}
+         <ul>
+             <h1>Interior</h1>
+         </ul>
+         
+          {{#with interior}}
+          
+           {{#with seats}}
+           <div><b>Seats: </b></div>
+           <ul>
+              <div>material: <em>{{material}}</em></div>
+              <div>color: <em>{{color}}</em></div>
+              <div>heated: <em>{{heated}}</em></div>
+              <div>ventilated: <em>{{ventilated}}</em></div>
+              </ul>
+           {{/with}}
+
+             <div><b>Dashboard: </b></div>
+               {{#with dashboard}}
+               <ul>
+               <div>Material: <em>{{material}}</em></div>
+                 <div>Color: <em>{{color}}</em></div>
+                 </ul>
+                   <div><b>Display: </b></div>
+                   {{#with display}}
+                   <ul>
+                     <div>Type: <em>{{type}}</em></div>
+                      <div>Size: <em>{{size}}</em></div>
+                      <div>Resolution: <em>{{resolution}}</em></div>
+                      <div>Touchscreen: <em>{{touchscreen}}</em></div>
+                      </ul>
+                   {{/with}}
+
+               {{/with}}
+                
+                   <div><b>Audio: </b></div>
+                    {{#with audio}}
+                     <ul>
+                       <div>System: <em>{{system}}</em></div>
+                       <div>Speakers: <em>{{speakers}}</em></div>
+                       <div>Subwoofer: <em>{{subwoofer}}</em></div>
+                       <div>Bluetooth: <em>{{bluetooth}}</em></div>
+                       <div>USB: <em>{{USB}}</em></div>
+                     </ul>
+
+                    {{/with}}
+          {{/with}}
+    </section>
+
+   <section>  
+               <ul>
+                 <h1>Exterior</h1>
+               </ul>
+              {{#with exterior}}
+                      <div><b>Weels:</b></div>
+                  {{#with wheels}} 
+                  
+                    
+                    <ul>
+                    <div>Size: <em>{{size}}</em></div>
+                    <div>Type: <em>{{type}}</em></div>
+                    <div>Color: <em>{{color}}</em></div>
+                    </ul>
+                  {{/with}}
+                     <div><b>Headlights:</b></div>
+                  {{#with headlights}}
+                    <ul>
+                      <div>Type: <em>{{type}}</em></div>
+                      <div>Brightness: <em>{{brightness}}</em></div>
+                      <div>Automatic: <em>{{automatic}}</em></div>
+                    </ul>
+                  {{/with}}
+                      <div><b>Sunroof:</b></div>
+                 {{#with sunroof}} 
+                   <ul>
+                    <div>Type: <em>{{type}}</em></div>
+                    <div>Size: <em>{{size}}</em></div>
+                    <div>Automatic: <em>{{automatic}}</em></div>
+                   </ul>
+                 {{/with}}
+              {{/with}}
+      </section> 
+    <section>
+        <ul>
+         <h1>Safety</h1>
+        </ul>
+              <div><b>Airbags:</b></div>
+         {{#with safety}}
+           {{#with airbags}}
+           <ul>
+           <div>Front: <em>{{front}}</em></div>
+           <div>Side: <em>{{side}}</em></div>
+           <div>Knee: <em>{{knee}}</em></div>
+           <div>Rear: <em>{{rear}}</em></div>
+           </ul>
+           {{/with}}
+              <div><b>Assistance:</b></div>
+              {{#with assistance}}
+               <ul>
+                <div>Blind spot monitoring: <em>{{ blind_spot_monitoring}}</em></div>
+                <div>Rear cross traffic alert: <em>{{rear_cross_traffic_alert}}</em></div>
+                <div>Lane departure warning: <em>{{lane_departure_warning}}</em></div>
+                <div>Adaptive cruise control: <em>{{adaptive_cruise_control}}</em></div>
+                <div>Collision warning: <em>{{collision_warning}}</em></div>
+               </ul>
+             {{/with}}
+          
+        {{/with}}
+    </section>
+{{/with}}
+<section>
+        <ul>
+          <h1>Engine</h1>
+        </ul>
+    {{#with engine}}
+        <ul>
+          <div>Type: <em>{{type}}</em></div>
+          <div>Displacement: <em>{{displacement}}</em></div>
+          <div>Horsepower: <em>{{horsepower}}</em></div>
+          <div>Torque: <em>{{torque}}</em></div>
+        </ul>
+            <div><b>Transmission:</b></div> 
+        {{#with transmission}}
+          <ul>
+            <div>Type: <em>{{type}}</em></div>
+            <div>Gears: <em>{{gears}}</em></div>
+          </ul>
+        {{/with}}
+    {{/with}}
+ </section> 
+ <section>
+   <ul>
+      <h1>Fuel economy</h1>
+        {{#with fuel_economy}}
+          <div>City: <em>{{city}}</em></div>
+            <div>Highway: <em>{{highway}}</em></div>
+              <div>Combined: <em>{{combined}}</em></div>
+        {{/with}}
+   </ul>
+ </section> 
+ <section>
+   <ul>
+     <h1>Price</h1>
+       {{#with price}}
+       
+         <div>Base: <em>{{base}}</em></div>
+           <div>Destination: <em>{{destination}}</em></div>
+        
+          {{#with options}}
+          
+            <div>Navigation: <em>{{navigation}}</em></div>
+            <div>Moonroof: <em>{{moonroof}}</em></div>
+             <div>Premium paint: <em>{{premium_paint}}</em></div>
+          
+          {{/with}}
+          <br>
+          <div><b>Total: <em>{{total}}</em></b></div>
+       {{/with}}
+   </ul>
+ </section>
+</main>
