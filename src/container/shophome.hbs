@@ -1,0 +1,130 @@
+<main>
+  {{#with navigation}}
+    <div class='card'>
+      <div class='nav'>
+
+        {{#each links}}
+          <div class='nav-item'>
+            <a class='nav-link' href='{{href}}'>{{text}}</a>
+          </div>
+        {{/each}}
+        <div class='nav-item'>
+          <a href='#' class='nav-link disabled'>Disabled</a>
+        </div>
+      </div>
+    </div>
+  {{/with}}
+  <section class='col-12'>
+    <div class='row'>
+      {{#with newsBlock}}
+        <h1 class='text-center m-5'>{{title}}</h1>
+        <div class='row g-1'>
+          {{#each cards}}
+
+            <div class='col-3'>
+              <div class='card text-bg-secondary'>
+                <div class='card-header'>{{title}}
+                  {{#if isTop}}
+                    <div
+                      class='badge rounded-pill bg-danger'
+                    >Top</div>
+                  {{/if}}
+                  {{#if isNew}}
+                    <div
+                      class='badge rounded-pill bg-success'
+                    >New</div>
+                  {{/if}}
+                </div>
+                <div class='card-body'>
+                  <p>{{description}}</p></div>
+              </div>
+            </div>
+
+          {{/each}}
+        </div>
+      {{/with}}
+    </div>
+  </section>
+
+  <section class='col-12 m-4'>
+
+    {{#with goodsBlock}}
+      <div class='row'>
+        <ul class="nav nav-tabs mb-5">
+            {{#each tabs}}
+            <li class="nav-link {{#if isActive}} active {{/if}} {{#if isDisabled}} disabled {{/if}}">
+                {{text}}
+            </li>
+            {{/each}}
+        </ul>
+      </div>
+      <section class="col-12">
+        <div class="row">
+          {{#each cards}}
+             
+              <div class="col-4">
+                <div class="card m-2">
+                    <img class="card-img-top" src='https://picsum.photos/400/200' alt="Product photo">
+                    <div class="card-body">
+                     <h5 class="card-title">{{title}}
+                        {{#if isHot}}
+                          <div class="badge rounded-pill bg-warning">Hot</div>
+                        {{/if}}
+                        {{#if isNew}}
+                          <div class="badge rounded-pill bg-primary">New</div>
+                        {{/if}}
+                     </h5>
+                     <p>{{description}}</p>
+                </div>
+             </div>
+             </div>
+             
+          {{/each}}
+        </div>  
+       </section>   
+    {{/with}}
+</section>
+  <section>
+      {{#with subscribe}}
+       <div class="card text-bg-dark">
+        <div class="card-body">
+         <h2>{{header}}</h2>
+          <p>{{description}}</p>
+        {{#each buttons}}
+         <div class="flex=column m-2">
+          <a class="btn btn-primary" href="{{link}}">{{text}}</a>
+         </div>
+        {{/each}}
+         </div>
+        </div>
+      {{/with}}
+  </section>
+   <section>
+      {{#with service}}
+         <div class="card text-bg-success">
+            <div class="card-body text-center">
+                <h2>{{title}}</h2>
+                <p>{{description}}</p>
+                {{#each buttons}}
+                  <a class="btn btn-primary" href="{{link}}">{{text}}</a>
+                {{/each}}
+            </div>
+         </div>
+      {{/with}}
+   </section>
+</main>
+<footer class="p-4">
+    <div class="row g-5">
+        {{#each footer}}
+            <div class="nav col-2">
+                <div>
+                    {{#each this}}
+                        <div>
+                            <a class="nav-link {{#if @last}} disabled {{/if}}" href="{{this.link}}">{{this.text}}</a>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</footer>
