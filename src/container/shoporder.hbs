@@ -21,9 +21,10 @@
     </div>
   </div>
 
-  
-  <header>
-    <div class="row">
+  <div class="row">
+    <div class="col-8">
+   <header>
+    
     <h1 class='p-4'>{{header}}</h1>
 
     
@@ -34,19 +35,32 @@
 
        <div class="row">
         <div class="col-8">
+           <div class="row">
+            
         {{#each buttons}}
+            
            {{#if isPrimary}}
-          <div class="col-3 pt-3">
-              <button class="btn btn-warning">{{text}}</button>
+           
+          <div class="col-2 w-50 pt-3">
+            
+              <button class="btn btn-warning btn-sm">{{text}}</button>
           </div>
+          
           {{/if}}
             {{#if isOutline}}
-                <div class="col-3 pt-3">
-                   <button class="btn btn-outline-warning">{{text}}</button>
+               
+                <div class="col-2 w-50 pt-3">
+                    
+                   <button class="btn btn-outline-warning btn-sm">{{text}}</button>
                 </div>
+                
             {{/if}}
+            
          {{/each}}
-        </div>
+         </div>
+         </div>
+         </div>
+        
         
 
         
@@ -112,42 +126,71 @@
                 {{/each}}
                 </div>
          {{/with}}
-         </div>
     {{/with}}
-       <div class="p-2">
-         <hr>
-       </div>
+  </header>
+</div>
+       
     
-       <div class="col-4">
+       <div class="col-4 p-5">
           <div class="row">
-             <div class="card">
+             <div class="card m-2">
+                
          {{#each action_block}}
               <div class="nav p-1 m-1">
                 <div class="nav-item">
                    {{#if isSuccess}} 
-                  <button class="btn btn-success">{{text}}</button>
+                  <button class="btn btn-success btn-sm">{{text}}</button>
                   {{/if}}
                   {{#if isDanger}}
-                  <button class="btn btn-danger">{{text}}</button>
+                  <button class="btn btn-danger btn-sm">{{text}}</button>
                   {{/if}}
                   {{#if isInfo}}
-                  <button class="btn btn-info">{{text}}</button>
+                  <button class="btn btn-info btn-sm">{{text}}</button>
                   {{/if}}
                   </div>
-                  </div>
+                </div>
             {{/each}}
-           
-         </div>
+            
+           </div>
        </div>
+
+    
        
-       <div class="col-4">
-       {{#with total}}
-          
-       {{/with}}
+          <div class="row">
+            <div class="card m-2">
+                <div class="card-body">
+                {{#with total}}
+                    <h5>{{title}}</h5>
+                    {{#each item_list}}
+                      <div>{{name}}: {{price}}</div>
+                    {{/each}}
+                    
+                      <hr>
+                    
+                      {{#each additional_info}}
+                        <div>{{text}}: {{value}}</div>
+                      {{/each}}
+
+                      <hr>
+                      {{#with total_price}}
+                        <div>{{text}}: {{value}}</div>
+                      {{/with}}
+                      <hr>
+                       {{#each button}}
+                         {{#if isPrimary}}
+                           <button class="btn btn-primary btn-sm">{{text}}</button>
+                         {{/if}}
+                         <br>
+                         {{#if isOutline}}
+                           <button class="btn btn-outline-primary btn-sm">{{text}}</button>
+                         {{/if}}
+                       {{/each}}
+                {{/with}}
+                </div>
+          </div>
+        </div>
        </div>
-     </div>  
+     
 
    </div>
-  </header>
-  
 </main>
