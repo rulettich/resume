@@ -1,0 +1,39 @@
+{{#each itemList}}
+  <div class='row'>
+    <div class='card d-flex flex-row m-4'>
+      <div class='card-body'>
+        <div class='row'>
+          <div class='col-3'>
+            <div>{{number}}</div>
+            <div><b>{{status}}</b></div>
+          </div>
+          <div class='col-1'>
+            {{#with amount}}
+              <div>{{title}}</div>
+              <div><b>{{value}}</b></div>
+            {{/with}}
+          </div>
+
+          <div class='col-6'>
+            {{#each images}}
+              <img
+                src='https://picsum.photos/110/100'
+                alt='Product photo'
+              />
+            {{/each}}
+          </div>
+          <div class='col-2'>
+            {{#with button}}
+              {{#if isPrimary}}
+                <a
+                  class='btn btn-primary btn-sm mt-4'
+                  href='link'
+                >{{text}}</a>
+              {{/if}}
+            {{/with}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/each}}
