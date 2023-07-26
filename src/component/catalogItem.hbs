@@ -1,0 +1,69 @@
+{{#each goodsList}}
+
+  <div class='col-6'>
+
+    <div class='card mb-3'>
+      <img
+        class='card-img-top'
+        src='{{img}}'
+        alt='Product photo'
+      />
+      <div class='card-body'>
+        {{#if isHot}}
+          <div
+            class='badge rouded-pill bg-warning'
+          >HOT!</div>
+        {{/if}}
+        {{#if isNew}}
+          <div
+            class='badge rouded-pill bg-primary'
+          >New</div>
+        {{/if}}
+        <div class='pt-3'>
+          {{#if isFast}}
+            <button class='btn btn-success btn-sm'>Швидка
+              доставка</button>
+          {{/if}}
+        </div>
+        <div class='pt-3'>
+          {{#if isFree}}
+            <button
+              class='btn btn-secondary btn-sm'
+            >Безкоштовна доставка</button>
+          {{/if}}
+        </div>
+        <h5 class='pt-3'>{{name}}</h5>
+        {{#with review}}
+          <div>{{amount}} {{text}}</div>
+        {{/with}}
+        <h4 class='pt-4'>{{price}}</h4>
+        <p>{{delivery}}</p>
+        {{#each buttons}}
+          <div>
+            {{#if isPrimary}}
+              <a
+                class='btn btn-primary'
+                href='{{link}}'
+              >{{text}}</a>
+            {{/if}}
+          </div>
+          <div class='pt-2'>
+            {{#if isSecondary}}
+              <a
+                class='btn btn-secondary'
+                href='{{link}}'
+              >{{text}}</a>
+            {{/if}}
+          </div>
+        {{/each}}
+        {{#each characteristics}}
+          <div class='mt-4'>
+            <ul>
+              <li>{{title}}: {{value}}</li>
+            </ul>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+{{/each}}
