@@ -2,117 +2,118 @@
     <div>
       <h1>{{name}}</h1>
     </div> 
-   <div>
+   <div class="mt-5">
      <em>{{description}}</em>
    </div>
-   <br>
-   <div>Price: <b>{{price}}</b></div>
+   
+   <div class="mt-3">Price: <b>{{price}}</b></div>
    <div>Category: <b>{{category}}</b></div>
 </header>
-<br>
+<div class="mt-3">
 <hr>
+</div>
 <main>
     {{#with features}}
       <h1>Features</h1>
   <section>
-    <ul>
+    <div class="ms-4 mt-3">
       {{>title data="Processor" big=false}}
-    </ul>
+    </div>
      {{#with processor}}
-       <div>Brand: <b>{{brand}}</b></div>
-       <div>Model: <b>{{model}}</b></div>
-       <div>Speed: <b>{{speed}}</b></div>
-       <div>Cores: <b>{{cores}}</b></div>
-       <div>Cache: <b>{{cache}}</b></div>
+       <div class="ms-5 mt-2">Brand: <b>{{brand}}</b></div>
+       <div class="ms-5 mt-2">Model: <b>{{model}}</b></div>
+       <div class="ms-5 mt-2">Speed: <b>{{speed}}</b></div>
+       <div class="ms-5 mt-2">Cores: <b>{{cores}}</b></div>
+       <div class="ms-5 mt-2">Cache: <b>{{cache}}</b></div>
      {{/with}}
   </section>
   <section>
-    <ul>
+    <div class="ms-4 mt-2">
       {{>title data="Memory" big=false}}
-    </ul>
+    </div>
       {{#with memory}}
-          <div>Type: <b>{{type}}</b></div>
-          <div>Size: <b>{{size}}</b></div>
-          <div>Speed: <b>{{speed}}</b></div>
+          <div class="ms-5 mt-2">Type: <b>{{type}}</b></div>
+          <div class="ms-5 mt-2">Size: <b>{{size}}</b></div>
+          <div class="ms-5 mt-2">Speed: <b>{{speed}}</b></div>
       {{/with}}
  </section>
  <section>
-    <ul>
+    <div class="ms-4 mt-2">
       {{>title data="Storage" big=false}}
-    </ul>
+    </div>
      {{#with storage}}
-       <div>Type: <b>{{type}}</b></div>
-       <div>Size: <b>{{size}}</b></div>
+       <div class="ms-5 mt-2">Type: <b>{{type}}</b></div>
+       <div class="ms-5 mt-2">Size: <b>{{size}}</b></div>
      {{/with}}
  </section>
  <section>
-    <ul>
+    <div class="ms-4 mt-2">
       {{>title data="Display" big=false}}
-    </ul>
+    </div>
       {{#with display}}
-        <div>Size: <b>{{size}}</b></div>
-        <div>Resolution: <b>{{resolution}}</b></div>
-        <div>Technology: <b>{{technology}}</b></div>
-        <div>Color space: <b>{{color_space}}</b></div>
-        <div>Brightness: <b>{{brightness}}</b></div>
-        <div>Refresh rate: <b>{{refresh_rate}}</b></div>
+        <div class="ms-5 mt-2">Size: <b>{{size}}</b></div>
+        <div class="ms-5 mt-2">Resolution: <b>{{resolution}}</b></div>
+        <div class="ms-5 mt-2">Technology: <b>{{technology}}</b></div>
+        <div class="ms-5 mt-2">Color space: <b>{{color_space}}</b></div>
+        <div class="ms-5 mt-2">Brightness: <b>{{brightness}}</b></div>
+        <div class="ms-5 mt-2">Refresh rate: <b>{{refresh_rate}}</b></div>
       {{/with}}
  </section> 
  <section>
-    <ul>
+    <div class="ms-4 mt-2">
        {{>title data="Graphics" big=false}}
-    </ul>
+    </div>
       {{#with graphics}}
-        <div>Brand: <b>{{brand}}</b></div>
-        <div>Model: <b>{{model}}</b></div>
-        <div>Memory: <b>{{memory}}</b></div>
+        <div class="ms-5 mt-2">Brand: <b>{{brand}}</b></div>
+        <div class="ms-5 mt-2">Model: <b>{{model}}</b></div>
+        <div class="ms-5 mt-2">Memory: <b>{{memory}}</b></div>
       {{/with}}
  </section> 
  <section>
-    <ul>
+   <div class="ms-4 mt-2">
       {{>title data="Ports" big=false}}
-    </ul>
+    </div>
       {{#each ports}}
-        <div>Type: <b>{{type}}</b></div>
-        <div>Count: <b>{{count}}</b></div>
-        <ul>
-        <div><b>{{features}}</b></div>
-        </ul>
+        <div class="ms-5 mt-2">Type: <b>{{type}}</b></div>
+        <div class="ms-5 mt-2">Count: <b>{{count}}</b></div>
+        
+        <div class="ms-5 mt-2"><b>{{features}}</b></div>
+        
       {{/each}}
 </section> 
 <section>
-    <ul>
+    <div class="ms-4 mt-2">
       {{>title data="Battery" big=false}}
-    </ul>
+    </div>
      {{#with battery}}
-        <div>Type: <b>{{type}}</b></div>
-        <div>Capacity: <b>{{capacity}}</b></div>
-        <div>Life: <b>{{life}}</b></div>
+        <div class="ms-5 mt-2">Type: <b>{{type}}</b></div>
+        <div class="ms-5 mt-2">Capacity: <b>{{capacity}}</b></div>
+        <div class="ms-5 mt-2">Life: <b>{{life}}</b></div>
      {{/with}}
      
 </section>  
-  <ul>
-    <div>Weight: <b>{{weight}}</b></div>
-  </ul>
+  
+    <div class="ms-5 mt-2">Weight: <b>{{weight}}</b></div>
+  
  <section>
-    <ul>
+    <div class="ms-4 mt-2">
       {{>title data="Dimensions" big=false}}
-    </ul>
+    </div>
      {{#with dimensions}}
-        <div>Height: <b>{{height}}</b></div>
-        <div>Width: <b>{{width}}</b></div>
-        <div>Depth: <b>{{depth}}</b></div>
+        <div class="ms-5 mt-2">Height: <b>{{height}}</b></div>
+        <div class="ms-5 mt-2">Width: <b>{{width}}</b></div>
+        <div class="ms-5 mt-2">Depth: <b>{{depth}}</b></div>
      {{/with}}
-      <div>Operating system: <b>{{operating_system}}</b></div>
+      <div class="ms-5 mt-2">Operating system: <b>{{operating_system}}</b></div>
  </section>
  <section>
-    <ul>
+   <div class="ms-4 mt-2">
       {{>title data="Accessories" big=false}}
-    </ul>
+    </div>
      {{#each accessories}}
-     <br>
-       <div>Name: <b>{{name}}</b></div>
-       <div>Price: <b>{{price}}</b></div>
+     
+       <div class="ms-5 mt-2">Name: <b>{{name}}</b></div>
+       <div class="ms-5 mt-2">Price: <b>{{price}}</b></div>
      {{/each}}
  </section>
   {{/with}}

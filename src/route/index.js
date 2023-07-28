@@ -38,11 +38,95 @@ var footer = {
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/', function (req, res) {
+router.get('/index', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index',
+    page: {
+      title: 'Resume project',
+    },
+    header: {
+      name: {
+        firstname: 'Руслан',
+        lastname: 'Нестеровський',
+        title: {
+          page_title: 'Resume project',
+        },
+      },
+    },
+    main: {
+      page_list: 'Список сторінок',
+      text: 'Мій перший проект по створенню сторінок',
+      buttons: [
+        {
+          text: 'Shopcatalog',
+          link: 'http://localhost:3000/shopcatalog',
+        },
+        {
+          text: 'Shopreview',
+          link: 'http://localhost:3000/shopreview',
+        },
+        {
+          text: 'Shopprofile',
+          link: 'http://localhost:3000/shopprofile',
+        },
+        {
+          text: 'Shopcart',
+          link: 'http://localhost:3000/shopcart',
+        },
+        {
+          text: 'Shoporder',
+          link: 'http://localhost:3000/shoporder',
+        },
+        {
+          text: 'Shophome',
+          link: 'http://localhost:3000/shophome',
+        },
+        {
+          text: 'Task31',
+          link: 'http://localhost:3000/task31',
+        },
+        {
+          text: 'Web',
+          link: 'http://localhost:3000/web',
+        },
+        {
+          text: 'Program',
+          link: 'http://localhost:3000/program',
+        },
+        {
+          text: 'Bio',
+          link: 'http://localhost:3000/bio',
+        },
+        {
+          text: 'Person',
+          link: 'http://localhost:3000/person',
+        },
+        {
+          text: 'Resume',
+          link: 'http://localhost:3000/summary',
+        },
+        {
+          text: 'Car',
+          link: 'http://localhost:3000/car',
+        },
+        {
+          text: 'Facebook',
+          link: 'http://localhost:3000/facebook',
+        },
+        {
+          text: 'Javascript',
+          link: 'http://localhost:3000/js',
+        },
+        {
+          text: 'MacBook Pro',
+          link: 'http://localhost:3000/mac',
+        },
+      ],
+    },
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
