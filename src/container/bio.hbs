@@ -2,17 +2,17 @@
   <div>
     <h1>{{name}}</h1>
   </div>
-  <div>({{birthdate}})</div>
+  <div class="mt-3">({{birthdate}})</div>
   <div>{{birthplace}}</div>
-  <br>
-  <div>({{deathdate}})</div>
+  
+  <div class="mt-3">({{deathdate}})</div>
   <div>{{deathplace}}</div>
-  <br />
-  <div>Nationality: {{nationality}}</div>
-  <br />
-  <div>Occupation: <b>{{occupation}}</b></div>
-  <br />
-  <div>Known for: <em>"{{known_for}}"</em></div>
+  
+  <div class="mt-3">Nationality: {{nationality}}</div>
+  
+  <div class="mt-3">Occupation: <b>{{occupation}}</b></div>
+  
+  <div class="mt-3">Known for: <em>"{{known_for}}"</em></div>
 </header>
 
 <hr />
@@ -20,75 +20,76 @@
   <section>
       {{> title data="Education" big=true}}
        {{#each education}}
-         <ul>
+         <div class="ms-4">
             <div><b>{{degree}}</b></div>
             <div>{{field}}</div>
             <div>{{institution}}</div>
             <div>({{year}})</div>
-         </ul>
+         </div>
         {{/each}}
   </section>
     <section>
           {{> title data="Notable publications" big=false}}
            {{#each notable_publications}}
-            <ul>
-             <div><em><b>{{title}}</b></em></div>
-             <br>
-             <div>({{year}})</div>
+            <div class="ms-4">
+             <div class="mt-2"><em><b>{{title}}</b></em></div>
+             
+             <div class="mt-2">({{year}})</div>
              <div>{{publisher}}</div>
-             <br>
-            </ul>
+             
+            </div>
            {{/each}}
     </section>
       <section>
           {{> title data="Partners" big=false}}
             {{#each partners}}
-             <ul>
-              <div><b>{{name}}</b></div>
-              <div>{{relationship}}</div>
-              <div>({{years}})</div>
-              </ul>
+             
+              <div class="ms-3 mt-2"><b>{{name}}</b></div>
+              <div class="ms-3 mt-2">{{relationship}}</div>
+              <div class="ms-3">({{years}})</div>
+              
+              
             {{/each}}
       </section>
         <section>
             {{> title data="Awards" big=false}}
              {{#each awards}}
-              <ul>
+              <div class="ms-4">
                 <div><b>{{title}}</b></div>
                 <div>({{year}})</div>
-                <br>
-                <div>{{description}}</div>
-              </ul>
+                
+                <div class="mt-2">{{description}}</div>
+              </div>
              {{/each}}
-             <ul>
-               <div>Influences: <em>{{influences}}</em></div>
+             <div class="ms-4">
+               <div class="mt-2">Influences: <em>{{influences}}</em></div>
                <div>Influenced: <em>{{influenced}}</em></div>
-             </ul>
+             </div>
         </section>
           <section>
             {{> title data="Quotes" big=false}}
               {{#each quotes}}
-                    <ul>
+                    <div class="ms-4">
                     <q>
                        <div>"{{first}}"</div>
                        <div>"{{second}}"</div>
                        <div>"{{third}}"</div>
                        <div>"{{fourth}}"</div>
                     </q>
-                    </ul>
+                    </div>
               {{/each}}
           </section>
             <section>
                 {{> title data="Major_discoveries" big=false}}
                   {{#each major_discoveries}}
-                    <ul>
+                    <div class="ms-4">
                    <div><em><b>{{title}}</b></em></div>
                      <div>({{year}})</div>
-                     <br>
-                      <div>
+                     
+                      <div class="mt-2">
                          Description: "{{description}}"
                       </div> 
-                       </ul>
+                       </div>
                   {{/each}}
             </section>
                <section>
@@ -96,8 +97,8 @@
                  <ul>
                     {{#with contributions}}
                         <div><b>{{title}}</b></div>
-                        <br>
-                         <div>
+                        
+                         <div class="mt-2">
                              Description: "{{description}}"
                          </div>
                          <div>({{year}})</div>
