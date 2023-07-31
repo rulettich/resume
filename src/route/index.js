@@ -62,67 +62,67 @@ router.get('/index', function (req, res) {
       buttons: [
         {
           text: 'Shopcatalog',
-          link: 'http://localhost:3000/shopcatalog',
+          link: 'http:/shopcatalog',
         },
         {
           text: 'Shopreview',
-          link: 'http://localhost:3000/shopreview',
+          link: 'http:/shopreview',
         },
         {
           text: 'Shopprofile',
-          link: 'http://localhost:3000/shopprofile',
+          link: 'http:/shopprofile',
         },
         {
           text: 'Shopcart',
-          link: 'http://localhost:3000/shopcart',
+          link: 'http:/shopcart',
         },
         {
           text: 'Shoporder',
-          link: 'http://localhost:3000/shoporder',
+          link: 'http:/shoporder',
         },
         {
           text: 'Shophome',
-          link: 'http://localhost:3000/shophome',
+          link: 'http:/shophome',
         },
         {
           text: 'Task31',
-          link: 'http://localhost:3000/task31',
+          link: 'http:/task31',
         },
         {
           text: 'Web',
-          link: 'http://localhost:3000/web',
+          link: 'http:/web',
         },
         {
           text: 'Program',
-          link: 'http://localhost:3000/program',
+          link: 'http:/program',
         },
         {
           text: 'Bio',
-          link: 'http://localhost:3000/bio',
+          link: 'http:/bio',
         },
         {
           text: 'Person',
-          link: 'http://localhost:3000/person',
+          link: 'http:/person',
         },
         {
           text: 'Resume',
-          link: 'http://localhost:3000/summary',
+          link: 'http:/summary',
         },
         {
           text: 'Car',
-          link: 'http://localhost:3000/car',
+          link: 'http:/car',
         },
         {
           text: 'Facebook',
-          link: 'http://localhost:3000/facebook',
+          link: 'http:/facebook',
         },
         {
           text: 'Javascript',
-          link: 'http://localhost:3000/js',
+          link: 'http:/js',
         },
         {
           text: 'MacBook Pro',
-          link: 'http://localhost:3000/mac',
+          link: 'http:/mac',
         },
       ],
     },
