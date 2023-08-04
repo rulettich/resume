@@ -62,67 +62,67 @@ router.get('/index', function (req, res) {
       buttons: [
         {
           text: 'Shopcatalog',
-          link: 'http:/shopcatalog',
+          link: '/shopcatalog',
         },
         {
           text: 'Shopreview',
-          link: 'http:/shopreview',
+          link: '/shopreview',
         },
         {
           text: 'Shopprofile',
-          link: 'http:/shopprofile',
+          link: '/shopprofile',
         },
         {
           text: 'Shopcart',
-          link: 'http:/shopcart',
+          link: '/shopcart',
         },
         {
           text: 'Shoporder',
-          link: 'http:/shoporder',
+          link: '/shoporder',
         },
         {
           text: 'Shophome',
-          link: 'http:/shophome',
+          link: '/shophome',
         },
         {
           text: 'Task31',
-          link: 'http:/task31',
+          link: '/task31',
         },
         {
           text: 'Web',
-          link: 'http:/web',
+          link: '/web',
         },
         {
           text: 'Program',
-          link: 'http:/program',
+          link: '/program',
         },
         {
           text: 'Bio',
-          link: 'http:/bio',
+          link: '/bio',
         },
         {
           text: 'Person',
-          link: 'http:/person',
+          link: '/person',
         },
         {
           text: 'Resume',
-          link: 'http:/summary',
+          link: '/summary',
         },
         {
           text: 'Car',
-          link: 'http:/car',
+          link: '/car',
         },
         {
           text: 'Facebook',
-          link: 'http:/facebook',
+          link: '/facebook',
         },
         {
           text: 'Javascript',
-          link: 'http:/js',
+          link: '/js',
         },
         {
           text: 'MacBook Pro',
-          link: 'http:/mac',
+          link: '/mac',
         },
       ],
     },
